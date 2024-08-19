@@ -42,7 +42,7 @@ const GroceryList = () => {
       <div className="grocery-list-container">
         <h1 className="title">Shopping List</h1>
         <input
-          placeholder="Type to add items into your groceries list..."
+          placeholder="Type to add items into your shopping list..."
           className="search-bar"
           value={input}
           onChange={(e) => handleChange(e.target.value)}

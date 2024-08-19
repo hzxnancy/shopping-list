@@ -103,26 +103,22 @@ export default function BasicTable({ data, deleteItem }) {
                 />
               </TableCell>
               <TableCell align="center">
-                <div className="quantity-label">
-                  <div
-                    onClick={() => handleQuantity(index, true)}
-                    style={{ cursor: "pointer" }}
-                  >
-                    +
-                  </div>
+                <div
+                  className="quantity-label"
+                  style={{
+                    color: row.checked ? "grey" : "black",
+                    cursor: "pointer",
+                  }}
+                >
+                  <div onClick={() => handleQuantity(index, true)}>+</div>
                   {row.quantity}
-                  <div
-                    onClick={() => handleQuantity(index, false)}
-                    style={{ cursor: "pointer" }}
-                  >
-                    -
-                  </div>
+                  <div onClick={() => handleQuantity(index, false)}>-</div>
                 </div>
               </TableCell>
               <TableCell align="center">
                 <IoIosClose
                   onClick={() => handleDelete(index)}
-                  style={{ cursor: "pointer" }}
+                  style={{ cursor: "pointer", color: row.checked ? "grey" : "black", }}
                 />
               </TableCell>
             </TableRow>
